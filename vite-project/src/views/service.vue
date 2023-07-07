@@ -231,7 +231,7 @@ const getResult = () => {
         pagesize: pageSize.value,
         keywords: input.value,
         serviceTypeId: serviceRadio.value,
-        serviceTypeId2: '',
+        serviceTypeId2: serviceSecondRadio.value,
         technicalId: technicalRadio.value,
         province: regionRadio.value,
         dataOrigin: sourceRadio.value,
@@ -279,7 +279,7 @@ const defaultImg = computed(() => {
 
 
 //响应监听
-watch([serviceRadio, technicalRadio, sourceRadio, regionRadio, pageSize, currentPage], () => {
+watch([serviceRadio, serviceSecondRadio,technicalRadio, sourceRadio, regionRadio, pageSize, currentPage], () => {
     getResult()
 })
 
